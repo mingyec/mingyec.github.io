@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript,数组,Array," />
 
 
 
@@ -84,15 +84,22 @@
 
 
 
-<meta name="description" content="他们说，就让他们去说">
-<meta property="og:type" content="website">
-<meta property="og:title" content="未明">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点
+1.同一数组可保存任意类型的数据这是一个很神奇的地方，也是js作为弱类型语言存在的理由之一。数组可以这样创建1var testArray = [1,2,&quot;red&quot;,3];
+2.数组长度动态调整数组的length属性很有特点——它不是只读的。我们可以通过设置这个属性来动态的调整数组12345">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于数组">
+<meta property="og:url" content="http://yoursite.com/2016/11/13/array_1/index.html">
 <meta property="og:site_name" content="未明">
-<meta property="og:description" content="他们说，就让他们去说">
+<meta property="og:description" content="javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点
+1.同一数组可保存任意类型的数据这是一个很神奇的地方，也是js作为弱类型语言存在的理由之一。数组可以这样创建1var testArray = [1,2,&quot;red&quot;,3];
+2.数组长度动态调整数组的length属性很有特点——它不是只读的。我们可以通过设置这个属性来动态的调整数组12345">
+<meta property="og:updated_time" content="2016-11-13T07:49:19.093Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未明">
-<meta name="twitter:description" content="他们说，就让他们去说">
+<meta name="twitter:title" content="关于数组">
+<meta name="twitter:description" content="javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点
+1.同一数组可保存任意类型的数据这是一个很神奇的地方，也是js作为弱类型语言存在的理由之一。数组可以这样创建1var testArray = [1,2,&quot;red&quot;,3];
+2.数组长度动态调整数组的length属性很有特点——它不是只读的。我们可以通过设置这个属性来动态的调整数组12345">
 
 
 
@@ -110,7 +117,7 @@
   };
 </script>
 
-  <title> 未明 </title>
+  <title> 关于数组 | 未明 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,9 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -220,9 +225,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -242,10 +247,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/11/13/array_1/" itemprop="url">
-                  关于数组
-                </a>
+                关于数组
               
             
           </h1>
@@ -316,9 +318,7 @@
       
 
       
-        
-          
-            <p>javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点</p>
+        <p>javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点</p>
 <h3 id="1-同一数组可保存任意类型的数据"><a href="#1-同一数组可保存任意类型的数据" class="headerlink" title="1.同一数组可保存任意类型的数据"></a>1.同一数组可保存任意类型的数据</h3><p>这是一个很神奇的地方，也是js作为弱类型语言存在的理由之一。数组可以这样创建<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> testArray = [<span class="number">1</span>,<span class="number">2</span>,<span class="string">"red"</span>,<span class="number">3</span>];</div></pre></td></tr></table></figure></p>
 <h3 id="2-数组长度动态调整"><a href="#2-数组长度动态调整" class="headerlink" title="2.数组长度动态调整"></a>2.数组长度动态调整</h3><p>数组的length属性很有特点——它不是只读的。我们可以通过设置这个属性来动态的调整数组<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> testArray = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line"><span class="built_in">console</span>.info(testArray.length);    <span class="comment">//3</span></div><div class="line"></div><div class="line">testArray.length = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.info(testArray);       <span class="comment">//["red","green"]</span></div><div class="line"><span class="built_in">console</span>.info(testArray[<span class="number">2</span>]);    <span class="comment">//undefined</span></div></pre></td></tr></table></figure></p>
 <p>以上代码可以清楚的了解到数组的长度可以动态调整，并且当长度小于之前的长度的时候，数组会依次删除最后一项来重新调整数组，增加数组长度的时候亦是依次增加数组最后一项来重新调整。通过这个特性可以很容易的向数组添加最后一项<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> testArray = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line">testArray[testArray.length] = <span class="string">"black"</span>;</div><div class="line"><span class="built_in">console</span>.info(testArray);    <span class="comment">//["red","green","blue","black"]</span></div></pre></td></tr></table></figure></p>
@@ -327,287 +327,58 @@
 <p>通过这个方法可以准确的判断是否是数组，不过需要注意浏览器兼容性问题</p>
 <h3 id="4-数组的方法"><a href="#4-数组的方法" class="headerlink" title="4.数组的方法"></a>4.数组的方法</h3><p>下节讲</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/06/bianliang/" itemprop="url">
-                  Js变量详解
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-06T14:27:24+08:00" content="2016-11-06">
-              2016-11-06
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技能体会/" itemprop="url" rel="index">
-                    <span itemprop="name">技能体会</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技能体会/JS/" itemprop="url" rel="index">
-                    <span itemprop="name">JS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/javascript-数组-Array/" rel="tag">#javascript,数组,Array</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p><strong>变量</strong>是javascript与其它编程语言明显不同的地方。从某个方面讲，<strong>变量</strong>也反应出javascript弱语言的本质，有过其它编程语言基础的人都会知道定义<strong>变量</strong>的同时也会声明变量的类型，就从javascript来讲也只是一个var就搞定的事（ES6新增了let关键字来声明变量）。</p>
-<p>变量分为<strong>基本类型</strong>和<strong>引用类型</strong></p>
-<p><img src="http://og7ohazcz.bkt.clouddn.com/bianliang.png" alt="变量类型"></p>
-<ol>
-<li><p>不能添加属性</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">'未明'</span>;</div><div class="line">name.age = <span class="number">18</span>;</div><div class="line"><span class="built_in">console</span>.info(name.age);      <span class="comment">//undefined</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>拷贝值不受原先值的影响（相互独立）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</div><div class="line"><span class="keyword">var</span> age_2 = age;</div><div class="line">age = <span class="number">81</span>;</div><div class="line"><span class="built_in">console</span>.info(age);        <span class="comment">//81</span></div><div class="line"><span class="built_in">console</span>.info(age_2);      <span class="comment">//18</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>类型检测用<strong>typeof</strong><br>如果变量的值是一个<em>对象</em>或者是<em>NULL</em>，都会返回<em>object</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</div><div class="line"><span class="keyword">var</span> name = <span class="string">'未明'</span>;</div><div class="line"><span class="keyword">var</span> isMan = <span class="literal">true</span>;</div><div class="line"><span class="keyword">var</span> addr;</div><div class="line"><span class="keyword">var</span> ques = <span class="literal">null</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> age);         <span class="comment">//Number</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> name);        <span class="comment">//String</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> isMan);       <span class="comment">//Boolean</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> addr);        <span class="comment">//undefined</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> ques);        <span class="comment">//object</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h3><p>引用类型指的是那些由多个值构成的对象，如<em>object</em>、<em>Array</em>等常见的引用类型，会独立出来讲。</p>
-<ol>
-<li><p>可以添加属性</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">person.name = <span class="string">'未明'</span>;</div><div class="line">person.age = <span class="number">18</span>;</div><div class="line"><span class="built_in">console</span>.info(person.name);       <span class="comment">//未明</span></div><div class="line"><span class="built_in">console</span>.info(person.age);        <span class="comment">//18</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>对拷贝值与原先值会互相影响<br>简单来说创建一个引用类型的变量其实是在堆内存中开辟出一块空间，然后拷贝该引用类型的变量只是拷贝了原先值的内存地址，无论是拷贝值还是原先值做出改变最终修改的始终是堆内存中的数值</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> person_2 = person;</div><div class="line">person_2.name = <span class="string">'未明'</span>;</div><div class="line"><span class="built_in">console</span>.info(person.name);       <span class="comment">//未明</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>类型检测<strong>instanceof</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="built_in">console</span>.info(person <span class="keyword">instanceof</span> <span class="built_in">Object</span>);    <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.info(person <span class="keyword">instanceof</span> <span class="built_in">Array</span>);     <span class="comment">//false</span></div></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/11/06/bianliang/" rel="next" title="Js变量详解">
+                <i class="fa fa-chevron-left"></i> Js变量详解
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/10/23/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-23T17:29:16+08:00" content="2016-10-23">
-              2016-10-23
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -615,6 +386,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -634,8 +409,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -685,6 +469,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-同一数组可保存任意类型的数据"><span class="nav-number">1.</span> <span class="nav-text">1.同一数组可保存任意类型的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数组长度动态调整"><span class="nav-number">2.</span> <span class="nav-text">2.数组长度动态调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-检测数组"><span class="nav-number">3.</span> <span class="nav-text">3.检测数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-数组的方法"><span class="nav-number">4.</span> <span class="nav-text">4.数组的方法</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -788,6 +583,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
