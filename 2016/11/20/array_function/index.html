@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript,数组,Array," />
 
 
 
@@ -84,15 +84,21 @@
 
 
 
-<meta name="description" content="他们说，就让他们去说">
-<meta property="og:type" content="website">
-<meta property="og:title" content="未明">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="上次说到数组的方法时没有具体的说下去，因为所涉及到的篇幅较长，故另开一篇来罗列js的数组方法。首先，先上一张近期整理的脑图：
+1.转换方法这个方法很简单明了，就是把数组的每一项用”，”连接起来转为字符串，看下面例子123var colors = [&apos;red&apos;,&apos;green&apos;,&apos;blue&apos;];var colString = colors.toString();console.info(colStri">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组方法罗列">
+<meta property="og:url" content="http://yoursite.com/2016/11/20/array_function/index.html">
 <meta property="og:site_name" content="未明">
-<meta property="og:description" content="他们说，就让他们去说">
+<meta property="og:description" content="上次说到数组的方法时没有具体的说下去，因为所涉及到的篇幅较长，故另开一篇来罗列js的数组方法。首先，先上一张近期整理的脑图：
+1.转换方法这个方法很简单明了，就是把数组的每一项用”，”连接起来转为字符串，看下面例子123var colors = [&apos;red&apos;,&apos;green&apos;,&apos;blue&apos;];var colString = colors.toString();console.info(colStri">
+<meta property="og:image" content="http://og7ohazcz.bkt.clouddn.com/Array.png">
+<meta property="og:updated_time" content="2016-11-23T14:15:25.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="未明">
-<meta name="twitter:description" content="他们说，就让他们去说">
+<meta name="twitter:title" content="数组方法罗列">
+<meta name="twitter:description" content="上次说到数组的方法时没有具体的说下去，因为所涉及到的篇幅较长，故另开一篇来罗列js的数组方法。首先，先上一张近期整理的脑图：
+1.转换方法这个方法很简单明了，就是把数组的每一项用”，”连接起来转为字符串，看下面例子123var colors = [&apos;red&apos;,&apos;green&apos;,&apos;blue&apos;];var colString = colors.toString();console.info(colStri">
+<meta name="twitter:image" content="http://og7ohazcz.bkt.clouddn.com/Array.png">
 
 
 
@@ -110,7 +116,7 @@
   };
 </script>
 
-  <title> 未明 </title>
+  <title> 数组方法罗列 | 未明 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,9 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -220,9 +224,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -242,10 +246,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/11/20/array_function/" itemprop="url">
-                  数组方法罗列
-                </a>
+                数组方法罗列
               
             
           </h1>
@@ -316,9 +317,7 @@
       
 
       
-        
-          
-            <p>上次说到数组的方法时没有具体的说下去，因为所涉及到的篇幅较长，故另开一篇来罗列js的数组方法。首先，先上一张近期整理的脑图：<br><img src="http://og7ohazcz.bkt.clouddn.com/Array.png" alt="数组罗列方法"></p>
+        <p>上次说到数组的方法时没有具体的说下去，因为所涉及到的篇幅较长，故另开一篇来罗列js的数组方法。首先，先上一张近期整理的脑图：<br><img src="http://og7ohazcz.bkt.clouddn.com/Array.png" alt="数组罗列方法"></p>
 <h3 id="1-转换方法"><a href="#1-转换方法" class="headerlink" title="1.转换方法"></a>1.转换方法</h3><p>这个方法很简单明了，就是把数组的每一项用”，”连接起来转为字符串，看下面例子<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'green'</span>,<span class="string">'blue'</span>];</div><div class="line"><span class="keyword">var</span> colString = colors.toString();</div><div class="line"><span class="built_in">console</span>.info(colString);    <span class="comment">//"red,green,blue"</span></div></pre></td></tr></table></figure></p>
 <h3 id="2-栈方法"><a href="#2-栈方法" class="headerlink" title="2.栈方法"></a>2.栈方法</h3><p>用数组模拟栈的结构来操作，栈的特点就是后进先出，顺带说下数组的常用添加方法也是<code>push()</code>，很重要很常用！<br>另一个方法是<code>pop()</code>，返回数组的最后一项，具体看下面例子<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [];    <span class="comment">//或者用new Array()之类的创建方法</span></div><div class="line">colors.push(<span class="string">'red'</span>,<span class="string">'green'</span>);</div><div class="line"><span class="built_in">console</span>.info(colors);    <span class="comment">//['red','green']</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> popColors = colors.pop();     <span class="comment">//取得最后一项</span></div><div class="line"><span class="built_in">console</span>.info(popColors);          <span class="comment">//'green'</span></div></pre></td></tr></table></figure></p>
 <h3 id="3-队列方法"><a href="#3-队列方法" class="headerlink" title="3.队列方法"></a>3.队列方法</h3><p>显而易见，这是模仿队列的数据结构，队列的特性是先进先出，严格按照排队的方式，排在前面的先出来。方法有两个：<code>shift()</code>和<code>unshift()</code>，前者返回数组的第一项，<code>unshift()</code>则类似于<code>push()</code>方法，不同的在于它是把数值添加为数组的第一项，具体看例子<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'green'</span>,<span class="string">'blue'</span>];</div><div class="line"><span class="keyword">var</span> col = colors.shift();</div><div class="line"><span class="built_in">console</span>.info(col);    <span class="comment">//'red'</span></div><div class="line"></div><div class="line">colors.unshift(<span class="string">'black'</span>);</div><div class="line"><span class="built_in">console</span>.info(colors);    <span class="comment">//['black','green','blue']</span></div></pre></td></tr></table></figure></p>
@@ -365,419 +364,58 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> test = values.some(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> item&gt;<span class="number">2</span>;</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.info(test);    <span class="comment">//true</span></div></pre></td></tr></table></figure>
 <h3 id="8-归并方法"><a href="#8-归并方法" class="headerlink" title="8.归并方法"></a>8.归并方法</h3><p>写到这里感觉自己太啰嗦了，磨磨蹭蹭到了最后一个方法。归并方法是ES5新增的，分别是<code>reduce()</code>和<code>reduceRight()</code>，作用都是将数组的所有项相加，回顾一下<code>forEach()</code>方法中的例子，更简洁的做法是用这两个归并方法。这两个方法之间的区别在于从第一项开始还是最后一项<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> test = values.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev,cur,index,array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> prev+cur;</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.info(test);    <span class="comment">//15</span></div></pre></td></tr></table></figure></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/13/array_1/" itemprop="url">
-                  关于数组
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-13T15:22:01+08:00" content="2016-11-13">
-              2016-11-13
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技能体会/" itemprop="url" rel="index">
-                    <span itemprop="name">技能体会</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技能体会/JS/" itemprop="url" rel="index">
-                    <span itemprop="name">JS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/javascript-数组-Array/" rel="tag">#javascript,数组,Array</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点</p>
-<h3 id="1-同一数组可保存任意类型的数据"><a href="#1-同一数组可保存任意类型的数据" class="headerlink" title="1.同一数组可保存任意类型的数据"></a>1.同一数组可保存任意类型的数据</h3><p>这是一个很神奇的地方，也是js作为弱类型语言存在的理由之一。数组可以这样创建<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> testArray = [<span class="number">1</span>,<span class="number">2</span>,<span class="string">"red"</span>,<span class="number">3</span>];</div></pre></td></tr></table></figure></p>
-<h3 id="2-数组长度动态调整"><a href="#2-数组长度动态调整" class="headerlink" title="2.数组长度动态调整"></a>2.数组长度动态调整</h3><p>数组的length属性很有特点——它不是只读的。我们可以通过设置这个属性来动态的调整数组<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> testArray = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line"><span class="built_in">console</span>.info(testArray.length);    <span class="comment">//3</span></div><div class="line"></div><div class="line">testArray.length = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.info(testArray);       <span class="comment">//["red","green"]</span></div><div class="line"><span class="built_in">console</span>.info(testArray[<span class="number">2</span>]);    <span class="comment">//undefined</span></div></pre></td></tr></table></figure></p>
-<p>以上代码可以清楚的了解到数组的长度可以动态调整，并且当长度小于之前的长度的时候，数组会依次删除最后一项来重新调整数组，增加数组长度的时候亦是依次增加数组最后一项来重新调整。通过这个特性可以很容易的向数组添加最后一项<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> testArray = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line">testArray[testArray.length] = <span class="string">"black"</span>;</div><div class="line"><span class="built_in">console</span>.info(testArray);    <span class="comment">//["red","green","blue","black"]</span></div></pre></td></tr></table></figure></p>
-<h3 id="3-检测数组"><a href="#3-检测数组" class="headerlink" title="3.检测数组"></a>3.检测数组</h3><p>要验证是否是数组，一般来说会采用如下方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.info(value <span class="keyword">instanceof</span> <span class="built_in">Array</span>);     <span class="comment">//true表示数组</span></div></pre></td></tr></table></figure></p>
-<p>上述方法适用于一般情况下，但如果项目采用多个框架的情况下却不能这样来验证是否是数组了，在ES5的时候为了解决这个问题而新增了以下方法来判断数组<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.info(<span class="built_in">Array</span>.isArray(value));       <span class="comment">//true表示数组</span></div></pre></td></tr></table></figure></p>
-<p>通过这个方法可以准确的判断是否是数组，不过需要注意浏览器兼容性问题</p>
-<h3 id="4-数组的方法"><a href="#4-数组的方法" class="headerlink" title="4.数组的方法"></a>4.数组的方法</h3><p>下节讲</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/11/13/array_1/" rel="next" title="关于数组">
+                <i class="fa fa-chevron-left"></i> 关于数组
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/11/06/bianliang/" itemprop="url">
-                  Js变量详解
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-06T14:27:24+08:00" content="2016-11-06">
-              2016-11-06
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技能体会/" itemprop="url" rel="index">
-                    <span itemprop="name">技能体会</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技能体会/JS/" itemprop="url" rel="index">
-                    <span itemprop="name">JS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p><strong>变量</strong>是javascript与其它编程语言明显不同的地方。从某个方面讲，<strong>变量</strong>也反应出javascript弱语言的本质，有过其它编程语言基础的人都会知道定义<strong>变量</strong>的同时也会声明变量的类型，就从javascript来讲也只是一个var就搞定的事（ES6新增了let关键字来声明变量）。</p>
-<p>变量分为<strong>基本类型</strong>和<strong>引用类型</strong></p>
-<p><img src="http://og7ohazcz.bkt.clouddn.com/bianliang.png" alt="变量类型"></p>
-<ol>
-<li><p>不能添加属性</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">'未明'</span>;</div><div class="line">name.age = <span class="number">18</span>;</div><div class="line"><span class="built_in">console</span>.info(name.age);      <span class="comment">//undefined</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>拷贝值不受原先值的影响（相互独立）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</div><div class="line"><span class="keyword">var</span> age_2 = age;</div><div class="line">age = <span class="number">81</span>;</div><div class="line"><span class="built_in">console</span>.info(age);        <span class="comment">//81</span></div><div class="line"><span class="built_in">console</span>.info(age_2);      <span class="comment">//18</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>类型检测用<strong>typeof</strong><br>如果变量的值是一个<em>对象</em>或者是<em>NULL</em>，都会返回<em>object</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</div><div class="line"><span class="keyword">var</span> name = <span class="string">'未明'</span>;</div><div class="line"><span class="keyword">var</span> isMan = <span class="literal">true</span>;</div><div class="line"><span class="keyword">var</span> addr;</div><div class="line"><span class="keyword">var</span> ques = <span class="literal">null</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> age);         <span class="comment">//Number</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> name);        <span class="comment">//String</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> isMan);       <span class="comment">//Boolean</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> addr);        <span class="comment">//undefined</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> ques);        <span class="comment">//object</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h3><p>引用类型指的是那些由多个值构成的对象，如<em>object</em>、<em>Array</em>等常见的引用类型，会独立出来讲。</p>
-<ol>
-<li><p>可以添加属性</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">person.name = <span class="string">'未明'</span>;</div><div class="line">person.age = <span class="number">18</span>;</div><div class="line"><span class="built_in">console</span>.info(person.name);       <span class="comment">//未明</span></div><div class="line"><span class="built_in">console</span>.info(person.age);        <span class="comment">//18</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>对拷贝值与原先值会互相影响<br>简单来说创建一个引用类型的变量其实是在堆内存中开辟出一块空间，然后拷贝该引用类型的变量只是拷贝了原先值的内存地址，无论是拷贝值还是原先值做出改变最终修改的始终是堆内存中的数值</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> person_2 = person;</div><div class="line">person_2.name = <span class="string">'未明'</span>;</div><div class="line"><span class="built_in">console</span>.info(person.name);       <span class="comment">//未明</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>类型检测<strong>instanceof</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="built_in">console</span>.info(person <span class="keyword">instanceof</span> <span class="built_in">Object</span>);    <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.info(person <span class="keyword">instanceof</span> <span class="built_in">Array</span>);     <span class="comment">//false</span></div></pre></td></tr></table></figure></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/23/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-23T17:29:16+08:00" content="2016-10-23">
-              2016-10-23
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -785,6 +423,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -804,8 +446,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -855,6 +506,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-转换方法"><span class="nav-number">1.</span> <span class="nav-text">1.转换方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-栈方法"><span class="nav-number">2.</span> <span class="nav-text">2.栈方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-队列方法"><span class="nav-number">3.</span> <span class="nav-text">3.队列方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-重排序方法"><span class="nav-number">4.</span> <span class="nav-text">4.重排序方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-操作方法"><span class="nav-number">5.</span> <span class="nav-text">5.操作方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-位置方法"><span class="nav-number">6.</span> <span class="nav-text">6.位置方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-迭代方法"><span class="nav-number">7.</span> <span class="nav-text">7.迭代方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-归并方法"><span class="nav-number">8.</span> <span class="nav-text">8.归并方法</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -958,6 +620,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
