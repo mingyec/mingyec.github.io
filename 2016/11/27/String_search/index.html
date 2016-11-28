@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript,数组,Array," />
+  <meta name="keywords" content="javascript,String," />
 
 
 
@@ -84,22 +84,16 @@
 
 
 
-<meta name="description" content="javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点
-1.同一数组可保存任意类型的数据这是一个很神奇的地方，也是js作为弱类型语言存在的理由之一。数组可以这样创建1var testArray = [1,2,&quot;red&quot;,3];
-2.数组长度动态调整数组的length属性很有特点——它不是只读的。我们可以通过设置这个属性来动态的调整数组12345">
+<meta name="description" content="前几天看到一道题：给定一个字符串，返回元音字符的数量一看到题目就有好几种想法在脑海中闪过，比如通过转为数组，循环判断匹配[a]、[e]、[i]、[o]、[u]的字符，这样做很蠢笨但很直接，当然我不会采用这种方式来做，毕竟拿不出手。所以尝试下用正则匹配JavaScript中的String就有许多操作方法，如search()、match()、replace()等，这里就不一一列举了，这里采用match">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于数组">
-<meta property="og:url" content="http://yoursite.com/2016/11/13/array_1/index.html">
+<meta property="og:title" content="字符检索">
+<meta property="og:url" content="http://yoursite.com/2016/11/27/String_search/index.html">
 <meta property="og:site_name" content="未明">
-<meta property="og:description" content="javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点
-1.同一数组可保存任意类型的数据这是一个很神奇的地方，也是js作为弱类型语言存在的理由之一。数组可以这样创建1var testArray = [1,2,&quot;red&quot;,3];
-2.数组长度动态调整数组的length属性很有特点——它不是只读的。我们可以通过设置这个属性来动态的调整数组12345">
-<meta property="og:updated_time" content="2016-11-13T07:49:19.093Z">
+<meta property="og:description" content="前几天看到一道题：给定一个字符串，返回元音字符的数量一看到题目就有好几种想法在脑海中闪过，比如通过转为数组，循环判断匹配[a]、[e]、[i]、[o]、[u]的字符，这样做很蠢笨但很直接，当然我不会采用这种方式来做，毕竟拿不出手。所以尝试下用正则匹配JavaScript中的String就有许多操作方法，如search()、match()、replace()等，这里就不一一列举了，这里采用match">
+<meta property="og:updated_time" content="2016-11-28T14:02:24.371Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于数组">
-<meta name="twitter:description" content="javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点
-1.同一数组可保存任意类型的数据这是一个很神奇的地方，也是js作为弱类型语言存在的理由之一。数组可以这样创建1var testArray = [1,2,&quot;red&quot;,3];
-2.数组长度动态调整数组的length属性很有特点——它不是只读的。我们可以通过设置这个属性来动态的调整数组12345">
+<meta name="twitter:title" content="字符检索">
+<meta name="twitter:description" content="前几天看到一道题：给定一个字符串，返回元音字符的数量一看到题目就有好几种想法在脑海中闪过，比如通过转为数组，循环判断匹配[a]、[e]、[i]、[o]、[u]的字符，这样做很蠢笨但很直接，当然我不会采用这种方式来做，毕竟拿不出手。所以尝试下用正则匹配JavaScript中的String就有许多操作方法，如search()、match()、replace()等，这里就不一一列举了，这里采用match">
 
 
 
@@ -117,7 +111,7 @@
   };
 </script>
 
-  <title> 关于数组 | 未明 </title>
+  <title> 字符检索 | 未明 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +241,7 @@
             
             
               
-                关于数组
+                字符检索
               
             
           </h1>
@@ -259,8 +253,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-13T15:22:01+08:00" content="2016-11-13">
-              2016-11-13
+            <time itemprop="dateCreated" datetime="2016-11-27T21:17:55+08:00" content="2016-11-27">
+              2016-11-27
             </time>
           </span>
 
@@ -318,14 +312,12 @@
       
 
       
-        <p>javascript的数组非常有趣，区别于大部分编程语言的数组，这里跳过一些大同小异的知识，讲一讲那些特殊点</p>
-<h3 id="1-同一数组可保存任意类型的数据"><a href="#1-同一数组可保存任意类型的数据" class="headerlink" title="1.同一数组可保存任意类型的数据"></a>1.同一数组可保存任意类型的数据</h3><p>这是一个很神奇的地方，也是js作为弱类型语言存在的理由之一。数组可以这样创建<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> testArray = [<span class="number">1</span>,<span class="number">2</span>,<span class="string">"red"</span>,<span class="number">3</span>];</div></pre></td></tr></table></figure></p>
-<h3 id="2-数组长度动态调整"><a href="#2-数组长度动态调整" class="headerlink" title="2.数组长度动态调整"></a>2.数组长度动态调整</h3><p>数组的length属性很有特点——它不是只读的。我们可以通过设置这个属性来动态的调整数组<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> testArray = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line"><span class="built_in">console</span>.info(testArray.length);    <span class="comment">//3</span></div><div class="line"></div><div class="line">testArray.length = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.info(testArray);       <span class="comment">//["red","green"]</span></div><div class="line"><span class="built_in">console</span>.info(testArray[<span class="number">2</span>]);    <span class="comment">//undefined</span></div></pre></td></tr></table></figure></p>
-<p>以上代码可以清楚的了解到数组的长度可以动态调整，并且当长度小于之前的长度的时候，数组会依次删除最后一项来重新调整数组，增加数组长度的时候亦是依次增加数组最后一项来重新调整。通过这个特性可以很容易的向数组添加最后一项<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> testArray = [<span class="string">"red"</span>,<span class="string">"green"</span>,<span class="string">"blue"</span>];</div><div class="line">testArray[testArray.length] = <span class="string">"black"</span>;</div><div class="line"><span class="built_in">console</span>.info(testArray);    <span class="comment">//["red","green","blue","black"]</span></div></pre></td></tr></table></figure></p>
-<h3 id="3-检测数组"><a href="#3-检测数组" class="headerlink" title="3.检测数组"></a>3.检测数组</h3><p>要验证是否是数组，一般来说会采用如下方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.info(value <span class="keyword">instanceof</span> <span class="built_in">Array</span>);     <span class="comment">//true表示数组</span></div></pre></td></tr></table></figure></p>
-<p>上述方法适用于一般情况下，但如果项目采用多个框架的情况下却不能这样来验证是否是数组了，在ES5的时候为了解决这个问题而新增了以下方法来判断数组<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.info(<span class="built_in">Array</span>.isArray(value));       <span class="comment">//true表示数组</span></div></pre></td></tr></table></figure></p>
-<p>通过这个方法可以准确的判断是否是数组，不过需要注意浏览器兼容性问题</p>
-<h3 id="4-数组的方法"><a href="#4-数组的方法" class="headerlink" title="4.数组的方法"></a>4.数组的方法</h3><p>下节讲</p>
+        <p>前几天看到一道题：<strong>给定一个字符串，返回元音字符的数量</strong><br>一看到题目就有好几种想法在脑海中闪过，比如通过转为数组，循环判断匹配[a]、[e]、[i]、[o]、[u]的字符，这样做很蠢笨但很直接，当然我不会采用这种方式来做，毕竟拿不出手。所以尝试下用<strong>正则匹配</strong><br>JavaScript中的String就有许多操作方法，如<code>search()</code>、<code>match()</code>、<code>replace()</code>等，这里就不一一列举了，这里采用<code>match()</code>来完成本次的目标</p>
+<blockquote>
+<p><code>match()</code>接收一个参数，可以是一个正则表达式或者RegExp对象，返回一个数组</p>
+</blockquote>
+<p>那么这道题就可以这么来做了<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCount</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> pattern = <span class="regexp">/[aeiou]/g</span>;</div><div class="line">    <span class="keyword">var</span> matches = text.match(pattern);</div><div class="line">    <span class="keyword">return</span> matches ? matches.length : <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> str = <span class="string">"cat, bat, sat, fat"</span>;</div><div class="line"><span class="keyword">var</span> result = getCount(str);</div><div class="line"><span class="built_in">console</span>.info(result);    <span class="comment">//4</span></div></pre></td></tr></table></figure></p>
+<p>这只是刚好拿来说明字符检索的小栗子罢了……</p>
 
       
     </div>
@@ -347,7 +339,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript-数组-Array/" rel="tag">#javascript,数组,Array</a>
+            <a href="/tags/javascript-String/" rel="tag">#javascript,String</a>
           
         </div>
       
@@ -356,17 +348,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/06/bianliang/" rel="next" title="Js变量详解">
-                <i class="fa fa-chevron-left"></i> Js变量详解
+              <a href="/2016/11/20/array_function/" rel="next" title="数组方法罗列">
+                <i class="fa fa-chevron-left"></i> 数组方法罗列
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/20/array_function/" rel="prev" title="数组方法罗列">
-                数组方法罗列 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -480,7 +468,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-同一数组可保存任意类型的数据"><span class="nav-number">1.</span> <span class="nav-text">1.同一数组可保存任意类型的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-数组长度动态调整"><span class="nav-number">2.</span> <span class="nav-text">2.数组长度动态调整</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-检测数组"><span class="nav-number">3.</span> <span class="nav-text">3.检测数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-数组的方法"><span class="nav-number">4.</span> <span class="nav-text">4.数组的方法</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
