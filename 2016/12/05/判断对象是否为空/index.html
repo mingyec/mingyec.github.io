@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript,变量," />
+  <meta name="keywords" content="javascript,object," />
 
 
 
@@ -84,33 +84,16 @@
 
 
 
-<meta name="description" content="变量是javascript与其它编程语言明显不同的地方。从某个方面讲，变量也反应出javascript弱语言的本质，有过其它编程语言基础的人都会知道定义变量的同时也会声明变量的类型，就从javascript来讲也只是一个var就搞定的事（ES6新增了let关键字来声明变量）。
-变量分为基本类型和引用类型
-
-
-不能添加属性
-123var name = &apos;未明&apos;;name.age = 18;conso">
+<meta name="description" content="做项目的时候，一般都会写到Ajax请求后台数据，形如这样12345678910111213Ext.Ajax.request(&amp;#123;    url: &apos;rest/../someFunction&apos;,    params: &amp;#123;        time: ...,        value: ...    &amp;#125;,    success: function(response) &amp;#1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Js变量详解">
-<meta property="og:url" content="http://yoursite.com/2016/11/06/bianliang/index.html">
+<meta property="og:title" content="判断对象是否为空">
+<meta property="og:url" content="http://yoursite.com/2016/12/05/判断对象是否为空/index.html">
 <meta property="og:site_name" content="未明">
-<meta property="og:description" content="变量是javascript与其它编程语言明显不同的地方。从某个方面讲，变量也反应出javascript弱语言的本质，有过其它编程语言基础的人都会知道定义变量的同时也会声明变量的类型，就从javascript来讲也只是一个var就搞定的事（ES6新增了let关键字来声明变量）。
-变量分为基本类型和引用类型
-
-
-不能添加属性
-123var name = &apos;未明&apos;;name.age = 18;conso">
-<meta property="og:image" content="http://og7ohazcz.bkt.clouddn.com/bianliang.png">
-<meta property="og:updated_time" content="2016-11-13T03:48:17.348Z">
+<meta property="og:description" content="做项目的时候，一般都会写到Ajax请求后台数据，形如这样12345678910111213Ext.Ajax.request(&amp;#123;    url: &apos;rest/../someFunction&apos;,    params: &amp;#123;        time: ...,        value: ...    &amp;#125;,    success: function(response) &amp;#1">
+<meta property="og:updated_time" content="2016-12-05T14:09:09.188Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Js变量详解">
-<meta name="twitter:description" content="变量是javascript与其它编程语言明显不同的地方。从某个方面讲，变量也反应出javascript弱语言的本质，有过其它编程语言基础的人都会知道定义变量的同时也会声明变量的类型，就从javascript来讲也只是一个var就搞定的事（ES6新增了let关键字来声明变量）。
-变量分为基本类型和引用类型
-
-
-不能添加属性
-123var name = &apos;未明&apos;;name.age = 18;conso">
-<meta name="twitter:image" content="http://og7ohazcz.bkt.clouddn.com/bianliang.png">
+<meta name="twitter:title" content="判断对象是否为空">
+<meta name="twitter:description" content="做项目的时候，一般都会写到Ajax请求后台数据，形如这样12345678910111213Ext.Ajax.request(&amp;#123;    url: &apos;rest/../someFunction&apos;,    params: &amp;#123;        time: ...,        value: ...    &amp;#125;,    success: function(response) &amp;#1">
 
 
 
@@ -128,7 +111,7 @@
   };
 </script>
 
-  <title> Js变量详解 | 未明 </title>
+  <title> 判断对象是否为空 | 未明 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +241,7 @@
             
             
               
-                Js变量详解
+                判断对象是否为空
               
             
           </h1>
@@ -270,8 +253,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-06T14:27:24+08:00" content="2016-11-06">
-              2016-11-06
+            <time itemprop="dateCreated" datetime="2016-12-05T21:38:08+08:00" content="2016-12-05">
+              2016-12-05
             </time>
           </span>
 
@@ -329,31 +312,9 @@
       
 
       
-        <p><strong>变量</strong>是javascript与其它编程语言明显不同的地方。从某个方面讲，<strong>变量</strong>也反应出javascript弱语言的本质，有过其它编程语言基础的人都会知道定义<strong>变量</strong>的同时也会声明变量的类型，就从javascript来讲也只是一个var就搞定的事（ES6新增了let关键字来声明变量）。</p>
-<p>变量分为<strong>基本类型</strong>和<strong>引用类型</strong></p>
-<p><img src="http://og7ohazcz.bkt.clouddn.com/bianliang.png" alt="变量类型"></p>
-<ol>
-<li><p>不能添加属性</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">'未明'</span>;</div><div class="line">name.age = <span class="number">18</span>;</div><div class="line"><span class="built_in">console</span>.info(name.age);      <span class="comment">//undefined</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>拷贝值不受原先值的影响（相互独立）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</div><div class="line"><span class="keyword">var</span> age_2 = age;</div><div class="line">age = <span class="number">81</span>;</div><div class="line"><span class="built_in">console</span>.info(age);        <span class="comment">//81</span></div><div class="line"><span class="built_in">console</span>.info(age_2);      <span class="comment">//18</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>类型检测用<strong>typeof</strong><br>如果变量的值是一个<em>对象</em>或者是<em>NULL</em>，都会返回<em>object</em></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</div><div class="line"><span class="keyword">var</span> name = <span class="string">'未明'</span>;</div><div class="line"><span class="keyword">var</span> isMan = <span class="literal">true</span>;</div><div class="line"><span class="keyword">var</span> addr;</div><div class="line"><span class="keyword">var</span> ques = <span class="literal">null</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> age);         <span class="comment">//Number</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> name);        <span class="comment">//String</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> isMan);       <span class="comment">//Boolean</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> addr);        <span class="comment">//undefined</span></div><div class="line"><span class="built_in">console</span>.info(<span class="keyword">typeof</span> ques);        <span class="comment">//object</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h3><p>引用类型指的是那些由多个值构成的对象，如<em>object</em>、<em>Array</em>等常见的引用类型，会独立出来讲。</p>
-<ol>
-<li><p>可以添加属性</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">person.name = <span class="string">'未明'</span>;</div><div class="line">person.age = <span class="number">18</span>;</div><div class="line"><span class="built_in">console</span>.info(person.name);       <span class="comment">//未明</span></div><div class="line"><span class="built_in">console</span>.info(person.age);        <span class="comment">//18</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>对拷贝值与原先值会互相影响<br>简单来说创建一个引用类型的变量其实是在堆内存中开辟出一块空间，然后拷贝该引用类型的变量只是拷贝了原先值的内存地址，无论是拷贝值还是原先值做出改变最终修改的始终是堆内存中的数值</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> person_2 = person;</div><div class="line">person_2.name = <span class="string">'未明'</span>;</div><div class="line"><span class="built_in">console</span>.info(person.name);       <span class="comment">//未明</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>类型检测<strong>instanceof</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="built_in">console</span>.info(person <span class="keyword">instanceof</span> <span class="built_in">Object</span>);    <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.info(person <span class="keyword">instanceof</span> <span class="built_in">Array</span>);     <span class="comment">//false</span></div></pre></td></tr></table></figure></li>
-</ol>
+        <p>做项目的时候，一般都会写到Ajax请求后台数据，形如这样<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Ext.Ajax.request(&#123;</div><div class="line">    <span class="attr">url</span>: <span class="string">'rest/../someFunction'</span>,</div><div class="line">    <span class="attr">params</span>: &#123;</div><div class="line">        <span class="attr">time</span>: ...,</div><div class="line">        <span class="attr">value</span>: ...</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line">        <span class="comment">//doSomething</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">failure</span>: <span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</div><div class="line">        <span class="comment">//doSomething</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>我现在项目用的是<strong>Extjs</strong>，所以就拿它的Ajax请求来做例子，一般请求完数据后会对<code>response</code>进行处理，转化为<strong>json对象</strong>，那么问题来了，有时候后台代码写得不尽如任意，明明请求不到数据却又是返回<code>success</code>，一提取却发现是空的对象，这样就会抛出错误，影响下一步的操作，那么就需要<strong>判断对象是否为空</strong><br>参考jquery的方法，有了下面的代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isNullObject</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</div><div class="line">        <span class="keyword">return</span> !<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> !<span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>传入一个对象到该方法，如果是空对象则返回<code>true</code></p>
 
       
     </div>
@@ -375,7 +336,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript-变量/" rel="tag">#javascript,变量</a>
+            <a href="/tags/javascript-object/" rel="tag">#javascript,object</a>
           
         </div>
       
@@ -384,13 +345,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/11/27/String_search/" rel="next" title="字符检索">
+                <i class="fa fa-chevron-left"></i> 字符检索
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/13/array_1/" rel="prev" title="关于数组">
-                关于数组 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -504,7 +465,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引用类型"><span class="nav-number">1.</span> <span class="nav-text">引用类型</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
